@@ -1,0 +1,56 @@
+header {
+    font-family: 'Ranchers', cursive;
+    background: #2F2E2E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+h1 {
+    color: #FAD000;
+    font-size:  27px;
+}
+nav {
+    color: #FAD000;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    height: 720px;
+}
+div {
+    padding: 10px;
+}
+
+body {
+    height: 720px;
+    font-family: 'Ranchers', cursive;
+    background:whitesmoke;
+}
+
+.bt {
+    border: 2px solid;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.bt:hover {
+    font-size: 23px;
+}
+
+h2 {
+    font-size:18px;
+}
+
+footer {
+    text-align: center;
+    height: 70px;
+    background: #2F2E2E;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between
+}
