@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de Cezar</title>
+</head>
+<body>
+    
+    <script>
+        
+        function cifraDeCesar(frase, deslocamento) {
+            var arrayFrase = frase.split('')
+            var fraseChar = []
+
+            for(var i=0; i<arrayFrase.length; i++) {
+                fraseChar.push(arrayFrase[i].charCodeAt()+ deslocamento);
+                
+            }
+            
+            var arrCode = []
+
+            for(var i=0; i<fraseChar.length; i++) {
+                arrCode.push(fraseChar[i].charCodeAt()+ deslocamento);
+
+            }
+            
+            return arrCode.join('')
+            
+        }
+        
+        document.write(cifraDeCesar('ROBERTO', 3))
+
+    </script>
+</body>
+</html>
