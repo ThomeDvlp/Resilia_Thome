@@ -9,27 +9,58 @@
     
     <script>
         
-        function cifraDeCesar(frase, deslocamento) {
-            var arrayFrase = frase.split('')
-            var fraseChar = []
+        function cifraDeCezar(deslocamento, palavra) 
+        {
+            var mensagemCifrada = '';
+            
+            for(let i of palavra) 
+            {
+                i= i.toUpperCase();
+                if (deslocamento > 26)
+                {
+                    deslocamento = 26;                    
+                }
 
-            for(var i=0; i<arrayFrase.length; i++) {
-                fraseChar.push(arrayFrase[i].charCodeAt()+ deslocamento);
-                
+                var letraNumerica = i.charCodeAt() + deslocamento;
+
+                mensagemCifrada += String.fromCharCode(letraNumerica);
+                    
+                if (letraNumerica > 90)
+                    {
+                        letraNumerica = letraNumerica - 26;
+                    }                
             }
-            
-            var arrCode = []
 
-            for(var i=0; i<fraseChar.length; i++) {
-                arrCode.push(fraseChar[i].charCodeAt()+ deslocamento);
-
-            }
-            
-            return arrCode.join('')
-            
+            return mensagemCifrada;    
         }
+        let teste = cifraDeCezar(7,'Roberto');
+        console.log(teste);
+
+        function deCifraDeCezar( deslocamento, mensagemCifrada )
+        {
+            var mensagemDecifrada = "";
+
+            for (let i of mensagemCifrada){
+
+                if (deslocamento > 26){
+                    deslocamento = 26;
+                }
+                var letraNumerica = i.charCodeAt() - deslocamento;
+
+                if (letraNumerica < 65){
+                    letraNumerica = letraNumber + 26;
+                }
+
+                mensagemDecifrada +=  String.fromCharCode(letraNumerica);
+            }
+
+            
+
+            return mensagemDecifrada;
+        }
+        let teste2 = deCifraDeCezar (7,'YVILY[V')
+        console.log(teste2);
         
-        document.write(cifraDeCesar('ROBERTO', 3))
 
     </script>
 </body>
